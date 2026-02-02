@@ -1,0 +1,466 @@
+{
+  "CSE": {
+    "1st-Semester": {
+      "Engineering Mathematics-I": [],
+      "Engineering Physics": [],
+      "Engineering Chemistry": [],
+      "Programming in C": [],
+      "Engineering Graphics": []
+    },
+    "2nd-Semester": {
+      "Engineering Mathematics-II": [],
+      "Data Structures": [],
+      "Digital Logic Design": [],
+      "Object Oriented Programming": [],
+      "Environmental Studies": []
+    },
+    "3rd-Semester": {
+      "Discrete Mathematics": [],
+      "Computer Organization": [],
+      "Database Management Systems": [],
+      "Operating Systems": [],
+      "Web Technologies": []
+    },
+    "4th-Semester": {
+      "Design and Analysis of Algorithms": [],
+      "Computer Networks": [],
+      "Software Engineering": [],
+      "Theory of Computation": [],
+      "Microprocessors": []
+    },
+    "5th-Semester": {
+      "Compiler Design": [],
+      "Computer Graphics": [],
+      "Machine Learning": [],
+      "Information Security": [],
+      "Elective-I": []
+    },
+    "6th-Semester": {
+      "Artificial Intelligence": [],
+      "Cloud Computing": [],
+      "Mobile Computing": [],
+      "Big Data Analytics": [],
+      "Elective-II": []
+    },
+    "7th-Semester": {
+      "Internet of Things": [],
+      "Blockchain Technology": [],
+      "DevOps": [],
+      "Elective-III": [],
+      "Project Work-I": []
+    },
+    "8th-Semester": {
+      "Cyber Security": [],
+      "Quantum Computing": [],
+      "Elective-IV": [],
+      "Project Work-II": [],
+      "Internship": []
+    }
+  },
+  "ECE": {
+    "1st-Semester": {
+      "Engineering Mathematics-I": [],
+      "Engineering Physics": [],
+      "Engineering Chemistry": [],
+      "Basic Electrical Engineering": [],
+      "Engineering Graphics": []
+    },
+    "2nd-Semester": {
+      "Engineering Mathematics-II": [],
+      "Electronic Devices": [],
+      "Circuit Theory": [],
+      "Digital Electronics": [],
+      "Programming in C": []
+    },
+    "3rd-Semester": {
+      "Signals and Systems": [],
+      "Analog Electronics": [],
+      "Network Analysis": [],
+      "Electromagnetic Theory": [],
+      "Control Systems": []
+    },
+    "4th-Semester": {
+      "Communication Systems": [],
+      "Microprocessors": [],
+      "Digital Signal Processing": [],
+      "VLSI Design": [],
+      "Antenna Theory": []
+    },
+    "5th-Semester": {
+      "Microcontrollers": [],
+      "Optical Communication": [],
+      "Embedded Systems": [],
+      "Power Electronics": [],
+      "Elective-I": []
+    },
+    "6th-Semester": {
+      "Wireless Communication": [],
+      "Satellite Communication": [],
+      "Digital Image Processing": [],
+      "CMOS VLSI Design": [],
+      "Elective-II": []
+    },
+    "7th-Semester": {
+      "Mobile Communication": [],
+      "RF and Microwave Engineering": [],
+      "IoT and Applications": [],
+      "Elective-III": [],
+      "Project Work-I": []
+    },
+    "8th-Semester": {
+      "5G Technology": [],
+      "Radar Systems": [],
+      "Elective-IV": [],
+      "Project Work-II": [],
+      "Internship": []
+    }
+  },
+  "Mechanical": {
+    "1st-Semester": {
+      "Engineering Mathematics-I": [],
+      "Engineering Physics": [],
+      "Engineering Chemistry": [],
+      "Engineering Mechanics": [],
+      "Engineering Graphics": []
+    },
+    "2nd-Semester": {
+      "Engineering Mathematics-II": [],
+      "Thermodynamics": [],
+      "Material Science": [],
+      "Manufacturing Processes": [],
+      "Programming in C": []
+    },
+    "3rd-Semester": {
+      "Fluid Mechanics": [],
+      "Strength of Materials": [],
+      "Kinematics of Machines": [],
+      "Metal Cutting": [],
+      "Engineering Metrology": []
+    },
+    "4th-Semester": {
+      "Heat Transfer": [],
+      "Dynamics of Machines": [],
+      "Design of Machine Elements": [],
+      "Hydraulics and Pneumatics": [],
+      "CAD/CAM": []
+    },
+    "5th-Semester": {
+      "Automobile Engineering": [],
+      "Refrigeration and Air Conditioning": [],
+      "Industrial Engineering": [],
+      "Finite Element Analysis": [],
+      "Elective-I": []
+    },
+    "6th-Semester": {
+      "Mechatronics": [],
+      "Robotics": [],
+      "Power Plant Engineering": [],
+      "Operations Research": [],
+      "Elective-II": []
+    },
+    "7th-Semester": {
+      "Additive Manufacturing": [],
+      "Renewable Energy Systems": [],
+      "Advanced Manufacturing": [],
+      "Elective-III": [],
+      "Project Work-I": []
+    },
+    "8th-Semester": {
+      "Computational Fluid Dynamics": [],
+      "Composite Materials": [],
+      "Elective-IV": [],
+      "Project Work-II": [],
+      "Internship": []
+    }
+  },
+  "Civil": {
+    "1st-Semester": {
+      "Engineering Mathematics-I": [],
+      "Engineering Physics": [],
+      "Engineering Chemistry": [],
+      "Engineering Mechanics": [],
+      "Engineering Graphics": []
+    },
+    "2nd-Semester": {
+      "Engineering Mathematics-II": [],
+      "Strength of Materials": [],
+      "Surveying": [],
+      "Building Materials": [],
+      "Environmental Studies": []
+    },
+    "3rd-Semester": {
+      "Structural Analysis": [],
+      "Fluid Mechanics": [],
+      "Geotechnical Engineering": [],
+      "Concrete Technology": [],
+      "Transportation Engineering": []
+    },
+    "4th-Semester": {
+      "Design of Concrete Structures": [],
+      "Water Resources Engineering": [],
+      "Foundation Engineering": [],
+      "Highway Engineering": [],
+      "Construction Management": []
+    },
+    "5th-Semester": {
+      "Design of Steel Structures": [],
+      "Environmental Engineering": [],
+      "Irrigation Engineering": [],
+      "Quantity Surveying": [],
+      "Elective-I": []
+    },
+    "6th-Semester": {
+      "Bridge Engineering": [],
+      "Earthquake Engineering": [],
+      "Town Planning": [],
+      "Prestressed Concrete": [],
+      "Elective-II": []
+    },
+    "7th-Semester": {
+      "Advanced Structural Design": [],
+      "Traffic Engineering": [],
+      "GIS and Remote Sensing": [],
+      "Elective-III": [],
+      "Project Work-I": []
+    },
+    "8th-Semester": {
+      "Green Building Technology": [],
+      "Disaster Management": [],
+      "Elective-IV": [],
+      "Project Work-II": [],
+      "Internship": []
+    }
+  },
+  "EEE": {
+    "1st-Semester": {
+      "Engineering Mathematics-I": [],
+      "Engineering Physics": [],
+      "Engineering Chemistry": [],
+      "Basic Electrical Engineering": [],
+      "Engineering Graphics": []
+    },
+    "2nd-Semester": {
+      "Engineering Mathematics-II": [],
+      "Circuit Theory": [],
+      "Electrical Machines-I": [],
+      "Electronic Devices": [],
+      "Programming in C": []
+    },
+    "3rd-Semester": {
+      "Electrical Machines-II": [],
+      "Power Systems-I": [],
+      "Control Systems": [],
+      "Measurements and Instrumentation": [],
+      "Electromagnetic Theory": []
+    },
+    "4th-Semester": {
+      "Power Systems-II": [],
+      "Power Electronics": [],
+      "Microprocessors": [],
+      "Digital Electronics": [],
+      "Electrical Drives": []
+    },
+    "5th-Semester": {
+      "High Voltage Engineering": [],
+      "Switchgear and Protection": [],
+      "Embedded Systems": [],
+      "Renewable Energy Systems": [],
+      "Elective-I": []
+    },
+    "6th-Semester": {
+      "Power System Analysis": [],
+      "Electric Vehicle Technology": [],
+      "Smart Grid": [],
+      "Industrial Automation": [],
+      "Elective-II": []
+    },
+    "7th-Semester": {
+      "Power System Operation and Control": [],
+      "HVDC Transmission": [],
+      "Energy Management": [],
+      "Elective-III": [],
+      "Project Work-I": []
+    },
+    "8th-Semester": {
+      "Power Quality": [],
+      "Distributed Generation": [],
+      "Elective-IV": [],
+      "Project Work-II": [],
+      "Internship": []
+    }
+  },
+  "IT": {
+    "1st-Semester": {
+      "Engineering Mathematics-I": [],
+      "Engineering Physics": [],
+      "Engineering Chemistry": [],
+      "Programming in C": [],
+      "Engineering Graphics": []
+    },
+    "2nd-Semester": {
+      "Engineering Mathematics-II": [],
+      "Data Structures": [],
+      "Digital Logic Design": [],
+      "Object Oriented Programming": [],
+      "Web Technologies": []
+    },
+    "3rd-Semester": {
+      "Database Management Systems": [],
+      "Computer Networks": [],
+      "Operating Systems": [],
+      "Software Engineering": [],
+      "Python Programming": []
+    },
+    "4th-Semester": {
+      "Cloud Computing": [],
+      "Information Security": [],
+      "Mobile Application Development": [],
+      "Big Data Analytics": [],
+      "Artificial Intelligence": []
+    },
+    "5th-Semester": {
+      "Machine Learning": [],
+      "DevOps": [],
+      "Blockchain Technology": [],
+      "Internet of Things": [],
+      "Elective-I": []
+    },
+    "6th-Semester": {
+      "Deep Learning": [],
+      "Cyber Security": [],
+      "Full Stack Development": [],
+      "Data Science": [],
+      "Elective-II": []
+    },
+    "7th-Semester": {
+      "Natural Language Processing": [],
+      "Edge Computing": [],
+      "Quantum Computing": [],
+      "Elective-III": [],
+      "Project Work-I": []
+    },
+    "8th-Semester": {
+      "Computer Vision": [],
+      "Distributed Systems": [],
+      "Elective-IV": [],
+      "Project Work-II": [],
+      "Internship": []
+    }
+  },
+  "AI-ML": {
+    "1st-Semester": {
+      "Engineering Mathematics-I": [],
+      "Engineering Physics": [],
+      "Programming in Python": [],
+      "Data Structures": [],
+      "Engineering Graphics": []
+    },
+    "2nd-Semester": {
+      "Engineering Mathematics-II": [],
+      "Statistics and Probability": [],
+      "Object Oriented Programming": [],
+      "Database Management Systems": [],
+      "Linear Algebra": []
+    },
+    "3rd-Semester": {
+      "Machine Learning": [],
+      "Deep Learning": [],
+      "Natural Language Processing": [],
+      "Computer Vision": [],
+      "Data Mining": []
+    },
+    "4th-Semester": {
+      "Artificial Intelligence": [],
+      "Neural Networks": [],
+      "Big Data Analytics": [],
+      "Reinforcement Learning": [],
+      "AI Ethics": []
+    },
+    "5th-Semester": {
+      "Advanced Machine Learning": [],
+      "Generative AI": [],
+      "Speech Processing": [],
+      "Time Series Analysis": [],
+      "Elective-I": []
+    },
+    "6th-Semester": {
+      "MLOps": [],
+      "Explainable AI": [],
+      "Edge AI": [],
+      "Federated Learning": [],
+      "Elective-II": []
+    },
+    "7th-Semester": {
+      "AI for Healthcare": [],
+      "Autonomous Systems": [],
+      "Quantum Machine Learning": [],
+      "Elective-III": [],
+      "Project Work-I": []
+    },
+    "8th-Semester": {
+      "AI in Robotics": [],
+      "Cognitive Computing": [],
+      "Elective-IV": [],
+      "Project Work-II": [],
+      "Internship": []
+    }
+  },
+  "Chemical": {
+    "1st-Semester": {
+      "Engineering Mathematics-I": [],
+      "Engineering Physics": [],
+      "Engineering Chemistry": [],
+      "Chemical Process Calculations": [],
+      "Engineering Graphics": []
+    },
+    "2nd-Semester": {
+      "Engineering Mathematics-II": [],
+      "Organic Chemistry": [],
+      "Physical Chemistry": [],
+      "Thermodynamics": [],
+      "Fluid Mechanics": []
+    },
+    "3rd-Semester": {
+      "Chemical Engineering Thermodynamics": [],
+      "Heat Transfer": [],
+      "Mass Transfer": [],
+      "Chemical Reaction Engineering": [],
+      "Process Instrumentation": []
+    },
+    "4th-Semester": {
+      "Process Equipment Design": [],
+      "Process Control": [],
+      "Petroleum Refining": [],
+      "Environmental Engineering": [],
+      "Plant Design": []
+    },
+    "5th-Semester": {
+      "Process Dynamics and Control": [],
+      "Polymer Engineering": [],
+      "Biochemical Engineering": [],
+      "Industrial Safety": [],
+      "Elective-I": []
+    },
+    "6th-Semester": {
+      "Process Modeling and Simulation": [],
+      "Petrochemical Technology": [],
+      "Nanotechnology": [],
+      "Energy Engineering": [],
+      "Elective-II": []
+    },
+    "7th-Semester": {
+      "Process Economics": [],
+      "Green Chemistry": [],
+      "Pharmaceutical Engineering": [],
+      "Elective-III": [],
+      "Project Work-I": []
+    },
+    "8th-Semester": {
+      "Process Optimization": [],
+      "Sustainable Engineering": [],
+      "Elective-IV": [],
+      "Project Work-II": [],
+      "Internship": []
+    }
+  }
+}
