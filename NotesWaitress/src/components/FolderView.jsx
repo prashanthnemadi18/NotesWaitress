@@ -45,14 +45,14 @@ const FolderView = ({ items, level, onNavigate }) => {
       </motion.div>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
         {items.map((item, index) => {
           const colors = getGradientColors(index);
           return (
             <motion.button
               key={item}
               onClick={() => onNavigate(level, item)}
-              className="group relative bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-transparent overflow-hidden"
+              className="group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-transparent overflow-hidden"
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ 
@@ -60,37 +60,37 @@ const FolderView = ({ items, level, onNavigate }) => {
                 delay: index * 0.05,
                 ease: 'easeOut'
               }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -4, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               {/* Gradient Background on Hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${colors.from} ${colors.to} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
               
               {/* Decorative Corner */}
-              <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${colors.from} ${colors.to} opacity-5 rounded-bl-full`} />
+              <div className={`absolute top-0 right-0 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${colors.from} ${colors.to} opacity-5 rounded-bl-full`} />
 
               {/* Content */}
               <div className="relative">
                 {/* Icon Container */}
                 <motion.div
-                  className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${colors.from} ${colors.to} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow`}
+                  className={`w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-gradient-to-br ${colors.from} ${colors.to} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow`}
                   whileHover={{ 
                     rotate: [0, -10, 10, -10, 0],
                     scale: 1.1
                   }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Folder className="w-8 h-8 text-white" strokeWidth={2} />
+                  <Folder className="w-6 h-6 sm:w-8 sm:h-8 text-white" strokeWidth={2} />
                 </motion.div>
 
                 {/* Title */}
-                <h3 className="text-base font-bold text-gray-800 mb-3 text-center line-clamp-2 min-h-[3rem] flex items-center justify-center group-hover:text-indigo-600 transition-colors">
+                <h3 className="text-sm sm:text-base font-bold text-gray-800 mb-2 sm:mb-3 text-center line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-center group-hover:text-indigo-600 transition-colors px-1">
                   {item}
                 </h3>
 
                 {/* Level Badge */}
-                <div className="flex items-center justify-center mb-3">
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${colors.from} ${colors.to} text-white shadow-md`}>
+                <div className="flex items-center justify-center mb-2 sm:mb-3">
+                  <span className={`inline-block px-2 sm:px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${colors.from} ${colors.to} text-white shadow-md`}>
                     {getLevelLabel(level)}
                   </span>
                 </div>
@@ -101,8 +101,8 @@ const FolderView = ({ items, level, onNavigate }) => {
                   initial={{ x: -5, opacity: 0 }}
                   whileHover={{ x: 0, opacity: 1 }}
                 >
-                  <span className="text-sm font-medium mr-1">Explore</span>
-                  <ChevronRight className="w-4 h-4" />
+                  <span className="text-xs sm:text-sm font-medium mr-1">Explore</span>
+                  <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
                 </motion.div>
               </div>
 

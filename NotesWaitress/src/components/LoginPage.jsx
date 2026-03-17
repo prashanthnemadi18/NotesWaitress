@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext';
 
 const LoginPage = () => {
   const [isLogin, setIsLogin] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,16 +13,34 @@ const LoginPage = () => {
   });
   const { login } = useAuth();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (isLogin) {
-      if (formData.email && formData.password) {
-        login({ name: formData.email.split('@')[0], email: formData.email });
+    setIsLoading(true);
+    
+    try {
+      if (isLogin) {
+        // Login
+        if (formData.email && formData.password) {
+          const result = await login(formData.email, formData.password);
+          if (!result.success) {
+            alert(result.error || 'Login failed');
+          }
+        } else {
+          alert('Please enter email and password');
+        }
+      } else {
+        // Sign Up (for demo, we just log them in)
+        if (formData.name && formData.email && formData.password) {
+          const result = await login(formData.email, formData.password);
+          if (!result.success) {
+            alert(result.error || 'Sign up failed');
+          }
+        } else {
+          alert('Please fill in all fields');
+        }
       }
-    } else {
-      if (formData.name && formData.email && formData.password) {
-        login({ name: formData.name, email: formData.email });
-      }
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -229,11 +248,23 @@ const LoginPage = () => {
 
               <motion.button
                 type="submit"
-                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                whileHover={{ scale: isLoading ? 1 : 1.02 }}
+                whileTap={{ scale: isLoading ? 1 : 0.98 }}
               >
-                {isLogin ? 'Login to Continue' : 'Create Account'}
+                {isLoading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <motion.div
+                      className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    />
+                    {isLogin ? 'Logging in...' : 'Creating account...'}
+                  </span>
+                ) : (
+                  isLogin ? 'Login to Continue' : 'Create Account'
+                )}
               </motion.button>
             </form>
 
@@ -247,6 +278,20 @@ const LoginPage = () => {
                 {isLogin ? 'Sign Up' : 'Login'}
               </button>
             </p>
+
+            {/* Demo Credentials */}
+            {isLogin && (
+              <motion.div
+                className="mt-4 p-3 bg-indigo-50 rounded-xl border border-indigo-100"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                <p className="text-xs text-indigo-700 text-center font-medium">
+                  💡 Demo: Use any email and password to login
+                </p>
+              </motion.div>
+            )}
           </div>
 
           {/* Info Text */}

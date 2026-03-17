@@ -7,34 +7,35 @@ const Breadcrumb = ({ path, onGoBack }) => {
 
   return (
     <div className="bg-white/80 backdrop-blur-xl border-b border-gray-200">
-      <div className="container mx-auto px-4 py-4">
-        <nav className="flex items-center gap-2 text-sm flex-wrap">
+      <div className="container mx-auto px-4 py-3 sm:py-4">
+        <nav className="flex items-center gap-1 sm:gap-2 text-sm flex-wrap">
           {/* Home */}
           <motion.button
             onClick={() => onGoBack(-1)}
-            className="flex items-center gap-2 px-3 py-2 text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-lg font-semibold transition-all"
+            className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-lg font-semibold transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Home className="w-4 h-4" />
-            <span>Home</span>
+            <Home className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="text-xs sm:text-sm">Home</span>
           </motion.button>
 
           {/* Path Items */}
           {path.map((item, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <ChevronRight className="w-4 h-4 text-gray-400" />
+            <div key={index} className="flex items-center gap-1 sm:gap-2">
+              <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" />
               {index < path.length - 1 ? (
                 <motion.button
                   onClick={() => onGoBack(index)}
-                  className="px-3 py-2 text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-lg font-semibold transition-all"
+                  className="px-2 sm:px-3 py-1.5 sm:py-2 text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-lg font-semibold transition-all text-xs sm:text-sm truncate max-w-[120px] sm:max-w-none"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  title={item}
                 >
                   {item}
                 </motion.button>
               ) : (
-                <span className="px-3 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-bold shadow-md">
+                <span className="px-2 sm:px-3 py-1.5 sm:py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-bold shadow-md text-xs sm:text-sm truncate max-w-[120px] sm:max-w-none" title={item}>
                   {item}
                 </span>
               )}

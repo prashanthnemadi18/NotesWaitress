@@ -59,11 +59,11 @@ const FileView = ({ files, path }) => {
       </motion.div>
 
       {/* Files Grid */}
-      <div className="grid gap-4">
+      <div className="grid gap-3 sm:gap-4">
         {files.map((file, index) => (
           <motion.div
             key={index}
-            className="group bg-white rounded-2xl p-5 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-indigo-200 relative overflow-hidden"
+            className="group bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-indigo-200 relative overflow-hidden"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -72,51 +72,51 @@ const FileView = ({ files, path }) => {
             {/* Gradient Background on Hover */}
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-            <div className="relative flex items-center justify-between gap-4">
+            <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
               {/* File Info */}
-              <div className="flex items-center gap-4 flex-1 min-w-0">
+              <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0 w-full sm:w-auto">
                 <motion.div
-                  className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
+                  className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
                   whileHover={{ rotate: [0, -10, 10, 0] }}
                   transition={{ duration: 0.5 }}
                 >
-                  <FileText className="w-7 h-7 text-white" />
+                  <FileText className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </motion.div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-gray-800 truncate text-lg group-hover:text-indigo-600 transition-colors">
+                  <h3 className="font-bold text-gray-800 truncate text-base sm:text-lg group-hover:text-indigo-600 transition-colors">
                     {file}
                   </h3>
                   <div className="flex items-center gap-2 mt-1">
                     <span className="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full font-medium">
                       PDF Document
                     </span>
-                    <span className="text-xs text-gray-500">• Ready to download</span>
+                    <span className="text-xs text-gray-500 hidden sm:inline">• Ready to download</span>
                   </div>
                 </div>
               </div>
 
               {/* Actions */}
-              <div className="flex items-center gap-2 flex-shrink-0">
+              <div className="flex items-center gap-2 flex-shrink-0 w-full sm:w-auto justify-end">
                 <motion.a
                   href={getFileUrl(file)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl transition-all flex items-center gap-2 text-sm font-semibold shadow-lg"
+                  className="flex-1 sm:flex-none px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg sm:rounded-xl transition-all flex items-center justify-center gap-2 text-sm font-semibold shadow-lg"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span className="hidden sm:inline">View</span>
+                  <span>View</span>
                 </motion.a>
                 <motion.a
                   href={getFileUrl(file)}
                   download
-                  className="px-4 py-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-xl transition-all flex items-center gap-2 text-sm font-semibold shadow-lg"
+                  className="flex-1 sm:flex-none px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-lg sm:rounded-xl transition-all flex items-center justify-center gap-2 text-sm font-semibold shadow-lg"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Download className="w-4 h-4" />
-                  <span className="hidden sm:inline">Download</span>
+                  <span>Download</span>
                 </motion.a>
               </div>
             </div>

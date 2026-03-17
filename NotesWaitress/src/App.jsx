@@ -140,16 +140,16 @@ const Dashboard = () => {
       <Header />
       
       {/* Search Bar */}
-      <div className="bg-white/80 backdrop-blur-xl border-b border-gray-200 py-5">
+      <div className="bg-white/80 backdrop-blur-xl border-b border-gray-200 py-3 sm:py-5">
         <div className="container mx-auto px-4">
           <div className="relative max-w-3xl mx-auto">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
             <input
               type="text"
               value={searchTerm}
               onChange={(e) => handleSearch(e.target.value)}
-              placeholder="🔍 Search for branches, semesters, or subjects..."
-              className="w-full pl-12 pr-12 py-4 border-2 border-gray-200 rounded-2xl focus:border-indigo-500 focus:outline-none transition-all bg-white shadow-sm hover:shadow-md text-gray-800 placeholder-gray-400 font-medium"
+              placeholder="🔍 Search branches, semesters, subjects..."
+              className="w-full pl-10 sm:pl-12 pr-10 sm:pr-12 py-3 sm:py-4 border-2 border-gray-200 rounded-xl sm:rounded-2xl focus:border-indigo-500 focus:outline-none transition-all bg-white shadow-sm hover:shadow-md text-gray-800 placeholder-gray-400 font-medium text-sm sm:text-base"
             />
             {searchTerm && (
               <motion.button
@@ -157,18 +157,18 @@ const Dashboard = () => {
                   setSearchTerm('');
                   setSearchResults([]);
                 }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.button>
             )}
             
             {/* Search Results Dropdown */}
             {searchResults.length > 0 && (
               <motion.div
-                className="absolute top-full left-0 right-0 mt-3 bg-white rounded-2xl shadow-2xl max-h-96 overflow-y-auto z-50 border-2 border-gray-100"
+                className="absolute top-full left-0 right-0 mt-2 sm:mt-3 bg-white rounded-xl sm:rounded-2xl shadow-2xl max-h-80 sm:max-h-96 overflow-y-auto z-50 border-2 border-gray-100"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
@@ -176,23 +176,23 @@ const Dashboard = () => {
                   <motion.button
                     key={index}
                     onClick={() => navigateToSearchResult(result.path)}
-                    className="w-full text-left px-5 py-4 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all border-b border-gray-100 last:border-b-0 first:rounded-t-2xl last:rounded-b-2xl"
+                    className="w-full text-left px-3 sm:px-5 py-3 sm:py-4 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all border-b border-gray-100 last:border-b-0 first:rounded-t-xl first:sm:rounded-t-2xl last:rounded-b-xl last:sm:rounded-b-2xl"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
                     whileHover={{ x: 5 }}
                   >
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-                        <Search className="w-5 h-5 text-white" />
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                        <Search className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="font-bold text-gray-800 truncate">{result.name}</p>
+                        <p className="font-bold text-gray-800 truncate text-sm sm:text-base">{result.name}</p>
                         {result.fullPath && (
                           <p className="text-xs text-gray-500 truncate">{result.fullPath}</p>
                         )}
                       </div>
-                      <span className="text-xs bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1.5 rounded-full font-semibold shadow-sm">
+                      <span className="text-xs bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-2 sm:px-3 py-1 sm:py-1.5 rounded-full font-semibold shadow-sm">
                         {result.type}
                       </span>
                     </div>
@@ -207,7 +207,7 @@ const Dashboard = () => {
       <Breadcrumb path={currentPath} onGoBack={goBack} />
       
       <motion.main
-        className="container mx-auto px-4 py-10"
+        className="container mx-auto px-4 py-6 sm:py-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -215,13 +215,13 @@ const Dashboard = () => {
         {/* Welcome Message */}
         {currentPath.length === 0 && !loading && (
           <motion.div
-            className="mb-10 text-center"
+            className="mb-6 sm:mb-10 text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
             <motion.div
-              className="inline-block mb-4"
+              className="inline-block mb-3 sm:mb-4"
               animate={{ 
                 rotate: [0, 10, -10, 0],
               }}
@@ -231,12 +231,12 @@ const Dashboard = () => {
                 ease: "easeInOut"
               }}
             >
-              <span className="text-6xl">👋</span>
+              <span className="text-4xl sm:text-6xl">👋</span>
             </motion.div>
-            <h2 className="text-4xl font-bold mb-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               Welcome back, {user?.name}!
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-base sm:text-lg px-4">
               Select a branch to explore premium study materials
             </p>
           </motion.div>
